@@ -1,0 +1,147 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr 5fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    /*height: 100%;*/
+    grid-gap: 1em;
+    grid-template-areas: 
+        ". . nav"
+        ". logo ."
+        ". button ."
+        ". user-content ."
+        ". . footer";
+}
+
+
+
+.grid-content div {
+    /*border: 1px #000000 solid;*/
+}
+
+.nav-bar {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.nav-bar div {
+    margin-right: 20px;
+    text-align: center;
+   
+}
+
+.nav-bar img {
+    width: 20px;
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 20px;
+    
+}
+
+.nav-bar img:hover {
+    cursor: pointer;
+    background-color:  #f8f2f2;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgba(85, 82, 82, 0.87);
+    font-family: "Segoe UI", "Roboto, arial, sans-serif";
+    font-size: 13px;
+    font-weight: 400;
+}
+
+a:link:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    grid-area: logo;
+    align-self: end;
+    justify-self: center;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+}
+
+.search-button {
+    grid-area: button;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.search-button input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #d1c9c9;
+    width: 95%;
+    border-radius: 20px;
+    box-shadow: 5px 2px 5px #d1c9c9;
+    outline: none;
+}
+
+.user-content {
+    grid-area: user-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-content div {
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    height:100px;
+    text-align: center;
+    font-family: "Segoe UI", "Roboto, arial, sans-serif";
+    font-size: 13px;
+    font-weight: 450;
+}
+
+
+.user-content div:hover {
+    background-color: #f8f2f2;
+    cursor: pointer;
+}
+
+.user-content img {
+    width: 35px;
+    padding: 7px;
+    background-color:  #f8f2f2;
+    border-radius: 50%;
+}
+
+.footer {
+    grid-area: footer;
+    justify-self: end;
+    
+}
+
+.footer button {
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    border: 1px #d1c9c9 solid;
+    box-shadow: 5px 5px 5px #d1c9c9;
+    color: #6478ec;
+    background-color: #ffffff;
+    margin-right: 20px;
+}
+
+.footer button:hover {
+    background-color: #dee4fd;
+    cursor: pointer;
+}
